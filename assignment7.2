@@ -1,0 +1,68 @@
+# acad-assignment7.2
+
+package assignment7;
+
+import java.util.Scanner;
+
+////////method1//////////////////////////
+////using string functions////////////
+public class FindSubString {
+	public static void main(String[] args) {
+		String word = "AcadGild";
+
+		if (word.indexOf("Gild") != -1) {
+			System.err.printf("String AcadGild contains 'Gild' %n", word);
+		} else {
+			System.err.printf("String AcadGild does not contains 'Gild' %n ", word);
+		}
+
+		if (word.contains("Acad")) {
+			System.err.printf("String AcadGild contains 'Acad' %n", word);
+		} else {
+			System.err.printf("String AcadGild does not contains 'Acad' %n", word);
+		}
+
+		if (word.contains("Bangalore")) {
+			System.err.printf("String AcadGild contains 'Bangalore' %n", word);
+		} else {
+			System.err.printf("String AcadGild does not contains 'Bangalore' %n", word);
+		}
+
+	}
+
+}
+
+///// method2//////////////
+/*
+ * public class TestSubstring{ public static void main(String args[]){ String
+ * s="AcadGild"; System.out.println(s.substring(4));//Tendulkar
+ * System.out.println(s.substring(0,3));//Sachin } }
+ */
+
+//////// method3//////////////////
+/////////// without using string functions///////////
+/*
+ * public class SubStringInString { public static void main(String[] args) {
+ * Scanner input = new Scanner(System.in);
+ * System.out.print("Please enter a String: "); String string1 = input.next();
+ * System.out.print("Please enter a second String: "); String string2 =
+ * input.next(); if (isSubstring(string1, string2)) {
+ * System.out.println("The first string is a substring of the second."); } else
+ * { System.out.println("The first string is NOT a substring of the second."); }
+ * }
+ * 
+ * public static boolean isSubstring(String string1, String string2) { char c;
+ * char d; boolean match = true; for (int i = 0; i < string1.length(); i++) { c
+ * = string1.charAt(i); for (int j = 0; i < string2.length(); i++) { d =
+ * string2.charAt(i); if (c != d) { match = true; } else { match = false; } } }
+ * return match; }
+ * 
+ * }
+ * 
+ */
+ 
+ 
+ output
+String AcadGild contains 'Gild' 
+String AcadGild contains 'Acad' 
+String AcadGild does not contains 'Bangalore' 
